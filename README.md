@@ -11,7 +11,7 @@
   > Tens of millions of people love Jeopardy, but most of them are either too chicken or too stupid to get on TV and that's where Jeopardify comes in!
 
 ## Solution ##
-  > Jeopardify offers a fun and interactive way for us to play the game we all know and love straight from our computer, tablet or phone without the paralizing effect of glaring TV cameras and without the risk of making yourself look like an idiot infront of millions of TV viewers.
+  > Jeopardify offers a fun and interactive way for us to play the game we all know and love straight from our computer, tablet or phone without the paralizing effect of glaring TV cameras and without the risk of making yourself look like an idiot in front of millions of TV viewers.
 
 ## Quote from You ##
   > At the heart of this product lies our deep desire to help make the world a better place, integrating the newest cutting-edge technologies for the most unique and comprehensive experience our users can imagine. This truly is tomorrow, today.
