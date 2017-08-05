@@ -1,8 +1,9 @@
 <div id="app">
   <!-- <video-list videos="$ctrl.videos" on-click="$ctrl.selectVideo"></video-list> -->
-  <div>
+  <div ng-click="$ctrl.hideTag1()">
     <h3>Pen is mightier</h3>
-    <h4 ng-click="$ctrl.displayOverlay()">200</h4>
+    <h4 ng-show="isTagOneActive" ng-click="$ctrl.displayOverlay()">200</h4>
   </div>
   <div id="overlay"></div>
+  <div><h2>{{score}}</h2></div>
 </div>
