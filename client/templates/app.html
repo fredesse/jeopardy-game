@@ -8,10 +8,35 @@
 </div> -->
 
 <div id="app">
-  <div>
-    <h3>The Pen is Mightier</h3>
-    <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+  <div class="categories">
+    <div class="category">
+      <h3>THE PEN IS</br> MIGHTIER</h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
+    <div class="category">
+      <h3>WHO READS</br> </h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
+    <div class="category">
+      <h3>MONTHS STARTING</br> WITH "FEB"</h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
+    <div class="category">
+      <h3>A SOUND A </br>DOGGIE MAKES</h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
+    <div class="category">
+      <h3>WHAT DAY </br>IT IS</h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
+    <div class="category">
+      <h3>WHO READS</h3>
+      <question-list questions="$ctrl.questions" on-click="$ctrl.displayOverlay"></question-list>
+    </div>
   </div>
   <div id="overlay"></div>
-  <div><h2>{{score}}</h2></div>
+  <div id="score">
+    <h3>Your score:</h3>
+    <h2>{{score}}</h2>
+  </div>
 </div>

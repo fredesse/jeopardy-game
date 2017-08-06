@@ -17,32 +17,23 @@ angular.module('app')
       myEl.empty();
     };
 
-    // this.hideTag1 = function() {
-    //   console.log('Dont touch me');
-    //   $scope.isTagOneActive = false;
-    // };
-
     this.appendToOverlay = function(element) {
       var temp = $compile(element)($scope);
       angular.element(document.getElementById('overlay')).append(temp);
     }
 
     this.submitAnswer = function(props) {
-      if (this.input === props.answer) {
+      if (this.input.toLowerCase() === props.answer.toLowerCase()) {
         console.log('Correct answer');
         $scope.score += props.price;
-        var correctAnswer = '<div>You answered correctly!</div>';
+        var correctAnswer = '<div class="answer">You answered correctly!</div>';
         scope.appendToOverlay(correctAnswer);
-        // var temp = $compile(correctAnswer)($scope);
-        // angular.element(document.getElementById('overlay')).append(temp);
       } else {
         console.log('Wrong answer');
         $scope.score -= props.price;
         $scope.answer = props.answer;
-        var wrongAnswer = '<div>The correct answer is: {{answer}}</div>';
+        var wrongAnswer = '<div class="answer">The correct answer is: {{answer}}</div>';
         scope.appendToOverlay(wrongAnswer);
-        // var temp = $compile(wrongAnswer)($scope);
-        // angular.element(document.getElementById('overlay')).append(temp);
       }
 
       this.input = null;
@@ -52,14 +43,10 @@ angular.module('app')
 
     this.displayOverlay = function(kvestion) {
       console.log('I was clicked');
-      //console.log('this is a question', kvestion);
-      // $scope.question = scope.questions[0].question;
       $scope.question = kvestion.question;
       $scope.props = kvestion;
-      var overlay = '<div class="overlay"><div>{{question}}</div><div><input ng-model="$ctrl.input" type="text" ng-keydown="$event.keyCode === 13 && $ctrl.submitAnswer(props)" /></div></div>';
+      var overlay = '<div class="overlay"><div class="question">{{question}}</div><div class="input"><input ng-model="$ctrl.input" type="text" ng-keydown="$event.keyCode === 13 && $ctrl.submitAnswer(props)" /></div></div>';
       scope.appendToOverlay(overlay);
-      // var temp = $compile(overlay)($scope);
-      // angular.element(document.getElementById('overlay')).append(temp);
     };
 
       // .catch(function ({data}) {

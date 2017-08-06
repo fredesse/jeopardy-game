@@ -1,0 +1,99 @@
+body {
+  background-color: #1739c1;
+  color: #f9e234;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+}
+
+h3 {
+
+  /*color: #fff;*/
+}
+
+.input {
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  font-size: 1.5em;
+  background-color: #1739c1;
+  color: #f9e234;
+}
+
+input:focus {
+  outline: none;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.category h3 {
+  padding: 15px;
+  border: 5px solid black;
+  min-height: 92px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.question-box {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 5px solid black;
+  border-top: 0px solid black;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#overlay {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question,
+.answer {
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: #fff;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 5px solid #f9e234;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#score h2 {
+    font-size: 3em;
+    margin-top: 1em;
+}
+
+#score h2,
+#score h3 {
+  margin: 0 auto;
+}
