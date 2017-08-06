@@ -13,9 +13,9 @@ var Movies = db.define('Movies', {
 // Movies.sync()
 //   .then(function() {
 //     return Movies.create({
-//       price: 200,
-//       question: 'This will be a question',
-//       answer: 'This will be an answer'});
+//       price: 1000,
+//       question: 'Makes you want to cry.',
+//       answer: 'What is this game?'});
 //   });
 
   module.exports = {Movies: Movies};

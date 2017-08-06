@@ -22,17 +22,17 @@ angular.module('app')
       $scope.isTagOneActive = false;
     };
 
-    this.submitAnswer = function() {
-      if (this.input === scope.questions[0].answer) {
+    this.submitAnswer = function(props) {
+      if (this.input === props.answer) {
         console.log('Correct answer');
-        $scope.score += scope.questions[0].price;
+        $scope.score += props.price;
         var correctAnswer = '<div>You answered correctly!</div>';
         var temp = $compile(correctAnswer)($scope);
         angular.element(document.getElementById('overlay')).append(temp);
       } else {
         console.log('Wrong answer');
-        $scope.score -= scope.questions[0].price;
-        $scope.answer = scope.questions[0].answer;
+        $scope.score -= props.price;
+        $scope.answer = props.answer;
         var wrongAnswer = '<div>The correct answer is: {{answer}}</div>';
         var temp = $compile(wrongAnswer)($scope);
         angular.element(document.getElementById('overlay')).append(temp);
@@ -40,14 +40,21 @@ angular.module('app')
 
       this.input = null;
 
-      $timeout(scope.emptyEl, 2500);
+      $timeout(scope.emptyEl, 3000);
     };
 
-    this.displayOverlay = function() {
-      console.log('I was clicked');
+    // this.selectQuestion = function(question) {
+    //   scope.currentQuestion = question;
+    // };
 
-      $scope.question = scope.questions[0].question;
-      var overlay = '<div class="overlay"><div>{{question}}</div><div><input ng-model="$ctrl.input" type="text" ng-keydown="$event.keyCode === 13 && $ctrl.submitAnswer()" /></div></div>';
+    this.displayOverlay = function(kvestion) {
+      console.log('I was clicked');
+      //console.log('this is a question', kvestion);
+
+      // $scope.question = scope.questions[0].question;
+      $scope.question = kvestion.question;
+      $scope.props = kvestion;
+      var overlay = '<div class="overlay"><div>{{question}}</div><div><input ng-model="$ctrl.input" type="text" ng-keydown="$event.keyCode === 13 && $ctrl.submitAnswer(props)" /></div></div>';
       var temp = $compile(overlay)($scope);
       angular.element(document.getElementById('overlay')).append(temp);
     };
