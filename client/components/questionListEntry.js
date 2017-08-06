@@ -8,7 +8,7 @@ angular.module('app')
 
     template: `
       <li>
-        <div ng-click="$ctrl.onClick($ctrl.question)">
+        <div ng-show="isTagOneActive" ng-click="$ctrl.onClick($ctrl.question)">
           {{$ctrl.question.price}}
         </div>
       </li>
